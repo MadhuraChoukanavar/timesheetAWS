@@ -316,7 +316,7 @@ public class TimesheetDataServiceImpl implements TimeSheetDataService {
 
 	public EmployeeBean getEmployeeManagerByEmpId(Integer employeeId) {
 		log.info("Connecting to Employee server...");
-		String url = "http://localhost:8082/api/employee/getReportingMngIdByEmpId/" + employeeId;
+		String url = "http://13.48.82.196:8082/api/employee/getReportingMngIdByEmpId/" + employeeId;
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -333,7 +333,7 @@ public class TimesheetDataServiceImpl implements TimeSheetDataService {
 
 	public AccountProjectsBean getAccountIdFromProjectId(Integer accountId) {
 		log.info("Connecting to AccountProject server...");
-		String url = "http://localhost:8083/api/accountProjects/getAccountProject/" + accountId;
+		String url = "http://13.48.82.196:8083/api/accountProjects/getAccountProject/" + accountId;
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -349,7 +349,7 @@ public class TimesheetDataServiceImpl implements TimeSheetDataService {
 
 	public AccountProjectTaskTypeBean getAccountTaskType(Integer taskTypeId) {
 		log.info("Connecting to other server...");
-		String url = "http://localhost:8083/api/accountProjectTaskType/" + taskTypeId;
+		String url = "http://13.48.82.196:8083/api/accountProjectTaskType/" + taskTypeId;
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -365,7 +365,7 @@ public class TimesheetDataServiceImpl implements TimeSheetDataService {
 
 	public AccountTaskBean getAccountTask(Integer taskId) {
 		log.info("Connecting to other server...");
-		String url = "http://localhost:8083/api/accountProjects/getbyid/" + taskId;
+		String url = "http://13.48.82.196:8083/api/accountProjects/getbyid/" + taskId;
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -382,7 +382,7 @@ public class TimesheetDataServiceImpl implements TimeSheetDataService {
 	public CommonReferenceDetailsBean getAttendanceType(Integer attendanceTypeId) {
 		try {
 			log.info("Connecting to CommonRefarance  server...");
-			String url = "http://localhost:8089/api/referencedetails/getbyid/" + attendanceTypeId;
+			String url = "http://13.48.82.196:8089/api/referencedetails/getbyid/" + attendanceTypeId;
 
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(MediaType.APPLICATION_JSON);
@@ -666,63 +666,7 @@ public class TimesheetDataServiceImpl implements TimeSheetDataService {
 		return new java.text.SimpleDateFormat("dd-MMM-yyyy").format(date);
 	}
 
-//	public static void setDatesToWeekAndDayDto(Date weekStartDate, WeekAndDayDto weekAndDayDto) {
-//	    weekAndDayDto.setWeekStartDate(weekStartDate);
-//	    weekAndDayDto.setDateMon(weekStartDate);
-//	    weekAndDayDto.setDateTue(DateUtils.addDays(weekStartDate, 1));
-//	    weekAndDayDto.setDateWed(DateUtils.addDays(weekStartDate, 2));
-//	    weekAndDayDto.setDateThu(DateUtils.addDays(weekStartDate, 3));
-//	    weekAndDayDto.setDateFri(DateUtils.addDays(weekStartDate, 4));
-//	    weekAndDayDto.setDateSat(DateUtils.addDays(weekStartDate, 5));
-//	    weekAndDayDto.setDateSun(DateUtils.addDays(weekStartDate, 6));
-//	   // System.out.println(weekAndDayDto.getDateSun());
-//	}
 
-//Date weekStartDate = timesheetDayEntity.getTimesheetWeekEntity().getWeekStartDate();
-//Date weekEndDate = timesheetDayEntity.getTimesheetWeekEntity().getWeekEndDate();
-//List<String> dateList = getDatesBetweenWeekStartAndEnd(weekStartDate, weekEndDate);
-//ArrayList<Integer> num = new ArrayList<>(List.of(weekAndDayDto.getHoursMon(),
-//		weekAndDayDto.getHoursTue(), weekAndDayDto.getHoursWed(), weekAndDayDto.getHoursThu(),
-//		weekAndDayDto.getHoursFri(), weekAndDayDto.getHoursSat(), weekAndDayDto.getHoursSun()));
-//System.out.println(num);
-//
-//System.out.println(dateList);
-//for (int i = 0; i < dateList.size(); i++) {
-//	boolean flag = false;
-//	Date dateOfWeek = convertDateStringToDate(dateList.get(i));
-//	SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-//	String dateString = formatter.format(timesheetDayEntity.getDate());
-//	System.out.println(dateString+"dataString");
-//	if(dateString==null)
-//	{
-//		if (num.get(i)!= 0) {
-//			System.out.println(dateOfWeek+"date");
-//			System.out.println(num.get(i));
-//			Integer timesheetWeekId2 = weekAndDayDto.getTimesheetWeekId();
-//			TimesheetWeekEntity timesheetWeekEntity = timesheetWeekRepo.findById(timesheetWeekId2)
-//					.get();
-//			TimesheetDayEntity timeDayEntity = createTimesheetDayEntity1(timesheetWeekEntity,
-//					weekAndDayDto, dateOfWeek, num.get(i));
-//			System.out.println(timeDayEntity);
-////			 timesheetDayRepo.save(timeDayEntity);
-//		}
-//	}
-//	else {
-//		System.out.println(dateString);
-//		
-//		Date date =convertDateStringToDate(dateString) ;
-//			
-//		
-//		if (date.equals(dateOfWeek) && timesheetDayEntity.getTimesheetDayId() != null && !flag) {
-//			timesheetDayEntity.setNumberOfHours(num.get(i));
-//			TimesheetDayEntity dayEntity = timesheetDayRepo.save(timesheetDayEntity);
-//			flag = true;
-//
-//		} else {
-//			System.out.println("elsepppppp");
-//
-//		}
-//	}
 
 	public List<EmployeeDataDto> getEmployeeDetailsByIdAndAccountId(Integer accountId, Integer employeeId) {
 

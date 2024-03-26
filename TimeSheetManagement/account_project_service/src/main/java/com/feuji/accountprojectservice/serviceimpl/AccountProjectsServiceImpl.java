@@ -48,7 +48,7 @@ private static Logger log = LoggerFactory.getLogger(AccountProjectsServiceImpl.c
 	
     @Override
 	public List<AccountBean> getAccountBean() {
-	    String url = "http://localhost:8081/api/accountSave";
+	    String url = "http://13.48.82.196:8081/api/accountSave";
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.setContentType(MediaType.APPLICATION_JSON);
 	    HttpEntity<String> httpEntity = new HttpEntity<>(headers);
@@ -198,7 +198,7 @@ private static Logger log = LoggerFactory.getLogger(AccountProjectsServiceImpl.c
 
 		@Override
 		public List<EmployeeBean> getEmployeeBean() {
-			   String url = "http://localhost:8082/api/employee/getAll";
+			   String url = "http://13.48.82.196:8082/api/employee/getAll";
 			    HttpHeaders headers = new HttpHeaders();
 		       headers.setContentType(MediaType.APPLICATION_JSON);
 			   HttpEntity<String> httpEntity = new HttpEntity<>(headers);
