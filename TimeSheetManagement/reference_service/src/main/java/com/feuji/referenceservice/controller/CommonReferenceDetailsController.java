@@ -26,7 +26,7 @@ import com.feuji.referenceservice.serviceImpl.CommonReferenceTypeImpl;
 
 @RestController
 @RequestMapping("/referencedetails")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class CommonReferenceDetailsController {
 	private static Logger log = LoggerFactory.getLogger(CommonReferenceTypeImpl.class);
 
@@ -36,7 +36,7 @@ public class CommonReferenceDetailsController {
 	CommonReferenceDetails commonReferenceDetails;
 
 //	@GetMapping("/getref/{typeName}")
-//	 @CrossOrigin(origins = "http://localhost:4200")
+//	 @CrossOrigin("*")
 //	
 //	public ResponseEntity<List<ReferenceDetailsBean>> getReferenceTypeByName(@PathVariable String typeName)
 //	{
@@ -53,7 +53,7 @@ public class CommonReferenceDetailsController {
 //	}
 //	}
 	@GetMapping("/getref/{typeName}")
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin("*")
 	public ResponseEntity<List<ReferenceDetailsBean>> getReferenceTypeByName(@PathVariable String typeName) {
 	    try {
 	        log.info("Fetching reference details for type: {}", typeName);

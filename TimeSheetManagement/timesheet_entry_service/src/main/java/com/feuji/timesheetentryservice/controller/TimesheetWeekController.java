@@ -36,7 +36,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/timesheet")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class TimesheetWeekController {
 	private static Logger log = LoggerFactory.getLogger(TimesheetWeekController.class);
 

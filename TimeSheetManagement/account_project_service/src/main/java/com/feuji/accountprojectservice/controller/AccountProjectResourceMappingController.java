@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/AccountProjectResourceMapping")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class AccountProjectResourceMappingController {
 	@Autowired
 	private AccountProjectResourceMappingService accountProjectResourceMappingService;

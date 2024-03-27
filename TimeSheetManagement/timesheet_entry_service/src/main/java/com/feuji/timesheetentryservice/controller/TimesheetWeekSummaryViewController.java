@@ -29,7 +29,7 @@ import com.feuji.timesheetentryservice.service.TimesheetWeekSummaryService;
 @RestController
 
 @RequestMapping("/TimesheetWeekSummaryView")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class TimesheetWeekSummaryViewController {
 	private static Logger log = LoggerFactory.getLogger(TimesheetWeekSummaryViewController.class);
 	

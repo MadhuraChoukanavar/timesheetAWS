@@ -27,7 +27,7 @@ import com.feuji.referenceservice.serviceImpl.CommonReferenceTypeImpl;
 
 @RestController
 @RequestMapping("/referencetype")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class CommonReferenceTypeController {
 
 	private static Logger log = LoggerFactory.getLogger(CommonReferenceTypeImpl.class);

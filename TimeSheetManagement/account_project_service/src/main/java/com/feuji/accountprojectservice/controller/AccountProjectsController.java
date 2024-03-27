@@ -26,7 +26,7 @@ import com.feuji.accountprojectservice.repository.AccountProjectsRepo;
 import com.feuji.accountprojectservice.service.AccountProjectsService;
 
 import lombok.extern.slf4j.Slf4j;
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 @Slf4j
 @RestController
 @RequestMapping("/accountProjects")

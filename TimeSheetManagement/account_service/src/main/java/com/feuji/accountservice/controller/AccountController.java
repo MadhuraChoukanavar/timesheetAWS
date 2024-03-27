@@ -33,7 +33,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/accountSave")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class AccountController {
 	private static Logger log = LoggerFactory.getLogger(AccountController.class);
 	@Autowired

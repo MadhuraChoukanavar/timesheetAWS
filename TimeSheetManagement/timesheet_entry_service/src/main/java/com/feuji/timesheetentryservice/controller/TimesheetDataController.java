@@ -32,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/timesheetdata")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class TimesheetDataController {
 	@Autowired
 	TimeSheetDataService timeSheetDataService;

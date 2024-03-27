@@ -30,7 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/holiday")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 public class HolidayController {
 	private static Logger log = LoggerFactory.getLogger(HolidayController.class);
 	@Autowired
